@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83806ad17bc2578459be61eb31ea6ec6, type: 3}
   m_Name: Settings_SupernovaSpaceship
   m_EditorClassIdentifier: 
-  thrustAmount: 60
-  thrustInput: 0
+  thrustAmount: 51
+  thrustInput: 0.011138021
   yawSpeed: 30
-  pitchSpeed: 15
-  steeringInput: {x: 0.10007899, y: 0, z: 0.05947072}
+  pitchSpeed: 30
+  steeringInput: {x: 0.0032335366, y: 0, z: -0.000049491508}
   leanAmount_X: 90
   leanAmount_Y: 30
   shootRate: 0.15

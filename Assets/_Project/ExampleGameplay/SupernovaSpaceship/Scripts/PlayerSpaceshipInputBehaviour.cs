@@ -17,6 +17,18 @@ public class PlayerSpaceshipInputBehaviour : MonoBehaviour
     private float rawInputThrust;
     private float smoothInputThrust;
 
+
+
+
+
+    
+    //AccShip
+    public float myAccelaration;
+    public float myAccelarationDecay;
+
+    public float myCurrentSpeed;
+
+
     //Shooting
     private bool shootHeld;
 
@@ -27,6 +39,8 @@ public class PlayerSpaceshipInputBehaviour : MonoBehaviour
     {
         Vector2 rawInput = value.ReadValue<Vector2>();
         rawInputSteering = new Vector3(rawInput.y, 0, -rawInput.x);
+
+         
         
     }
 
@@ -50,6 +64,24 @@ public class PlayerSpaceshipInputBehaviour : MonoBehaviour
     {
         InputSmoothing();
         SetInputData();
+
+         if(Input.GetKey(KeyCode.H))
+        { 
+            if(spaceshipData.thrustAmount<120)
+            {spaceshipData.thrustAmount+=myAccelaration;}
+           
+        }
+         if(!Input.GetKeyDown(KeyCode.H))
+        { 
+            if(spaceshipData.thrustAmount>51)
+            {spaceshipData.thrustAmount-=myAccelarationDecay;}
+
+
+
+        }
+
+
+
     }
 
      void InputSmoothing()

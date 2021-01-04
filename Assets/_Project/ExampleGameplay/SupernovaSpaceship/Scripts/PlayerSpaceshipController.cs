@@ -16,17 +16,33 @@ public class PlayerSpaceshipController : MonoBehaviour
     private float nextShot = 0.0f;
     public Transform shipModel;
 
+
+
+
+
     void FixedUpdate()
     {
         MoveSpaceship();
         TurnSpaceship();
         CalculateShootingLogic();
+
     }
 
      void MoveSpaceship()
     {
         spaceshipRigidbody.velocity = transform.forward * data.thrustAmount * (Mathf.Max(data.thrustInput,.2f));
+
+
+
     }
+
+
+
+//acelarateShip1
+    
+
+
+
 
     void TurnSpaceship()
     {
