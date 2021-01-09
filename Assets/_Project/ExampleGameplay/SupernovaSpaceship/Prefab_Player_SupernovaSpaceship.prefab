@@ -79,6 +79,7 @@ TrailRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -216,6 +217,7 @@ TrailRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -382,8 +384,6 @@ GameObject:
   - component: {fileID: 4068327185224481238}
   - component: {fileID: 8053178135859430311}
   - component: {fileID: 8053178135859430308}
-  - component: {fileID: 416781061}
-  - component: {fileID: 416781062}
   m_Layer: 0
   m_Name: Prefab_Player_SupernovaSpaceship
   m_TagString: Untagged
@@ -436,6 +436,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8053178135859430315}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OnSteering
         m_Mode: 0
         m_Arguments:
@@ -455,6 +456,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8053178135859430315}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OnThrust
         m_Mode: 0
         m_Arguments:
@@ -470,6 +472,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8053178135859430315}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OnShoot
         m_Mode: 0
         m_Arguments:
@@ -482,6 +485,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3d768dc3-82c7-424a-9d28-529121462944
     m_ActionName: Spaceship Controls/Shoot[/DualShock4GamepadHID/buttonSouth,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18bedb15-c5e8-4558-8ff9-1f1bfc80ba14
+    m_ActionName: Spaceship Controls/Focus[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Spaceship Controls
@@ -501,6 +508,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steeringSmoothing: 1.5
   thrustSmoothing: 2
+  myAccelaration: 0
+  myAccelarationDecay: 0
+  myCurrentSpeed: 0
   spaceshipData: {fileID: 11400000, guid: d74614823da6d4542ba09f3d82e63409, type: 2}
 --- !u!114 &8053178135859430309
 MonoBehaviour:
@@ -518,6 +528,7 @@ MonoBehaviour:
   spaceshipRigidbody: {fileID: 8053178135859430308}
   projectileObjectPool: {fileID: 8053178135859430311}
   projectileSpawnTransform: {fileID: 8053178135796252454}
+  shipModel: {fileID: 0}
 --- !u!114 &8154113204455279259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: d74614823da6d4542ba09f3d82e63409, type: 2}
   trailParent: {fileID: 8392883511680687832}
+  spaceshipRenderer: {fileID: 0}
 --- !u!114 &8053178135859430311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,43 +586,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &416781061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8053178135859430313}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: c694ae3e0c7e1764c8ffd8616fe06814, type: 2}
---- !u!114 &416781062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8053178135859430313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"Spaceship Data","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Object
-      Pool Behaviour","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Projectile
-      Spawn Transform","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Next
-      Shot (DON''T EDIT)","value":{"$content":0.0,"$type":"System.Single"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: d74614823da6d4542ba09f3d82e63409, type: 2}
-    - {fileID: 8053178135859430311}
-    - {fileID: 8053178135796252454}
 --- !u!1001 &8053178135709307531
 PrefabInstance:
   m_ObjectHideFlags: 0

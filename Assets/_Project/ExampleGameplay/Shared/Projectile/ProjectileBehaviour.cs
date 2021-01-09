@@ -14,20 +14,13 @@ public class ProjectileBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
-       /* Vector3 tempPos = transform.position;
+      Vector3 tempPos = transform.position;
         MoveProjectile();
         if (Physics.Linecast(tempPos, transform.position, out RaycastHit hitInfo, data.layerMask))
         {
             RemoveProjectile();
-            if (hitInfo.transform.CompareTag("Enemy") && hitInfo.transform.TryGetComponent(out Damageable damageable))
-            {
-                damageable.ApplyDamage(new Damageable.DamageMessage()
-                {
-                    amount = 2,
-                    damageSource = transform.position
-                });
-            }
-        }*/
+           
+        }
 
     }
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b830610f4f6f2bc4b8105c485f2a3239, type: 3}
   m_Name: Settings_ProjectileLaser
   m_EditorClassIdentifier: 
-  movementSpeed: 500
+  movementSpeed: 1500
   autoRemoveCountdown: 5
   layerMask:
     serializedVersion: 2

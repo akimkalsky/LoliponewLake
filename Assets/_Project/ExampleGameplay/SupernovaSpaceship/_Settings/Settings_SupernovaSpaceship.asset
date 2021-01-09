@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Settings_SupernovaSpaceship
   m_EditorClassIdentifier: 
   thrustAmount: 51
-  thrustInput: 0.011138021
+  thrustInput: 0
   yawSpeed: 30
   pitchSpeed: 30
-  steeringInput: {x: 0.0032335366, y: 0, z: -0.000049491508}
+  steeringInput: {x: 0, y: 0, z: 0.037330773}
   leanAmount_X: 90
-  leanAmount_Y: 30
+  leanAmount_Y: 90
+  maxLeanAmount_X: 360
+  maxLeanAmount_Y: 100
   shootRate: 0.15
   shootInput: 0
   cameraTurnAmount: 0

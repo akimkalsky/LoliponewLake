@@ -17,6 +17,17 @@ public class SpaceshipData : ScriptableObject
     public float leanAmount_X;
     public float leanAmount_Y;
 
+
+
+
+    //newStuffff
+    
+    public float maxLeanAmount_X;
+    public float maxLeanAmount_Y;
+
+
+
+
     [Header("Shooting")]
     public float shootRate;
     [HideInInspector] public bool shootInput;

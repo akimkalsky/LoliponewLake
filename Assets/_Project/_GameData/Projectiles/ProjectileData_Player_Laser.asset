@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 438ae68fd3c07c147a532d6883bd1f82, type: 3}
+  m_Script: {fileID: 0}
   m_Name: ProjectileData_Player_Laser
   m_EditorClassIdentifier: 
-  movementSpeed: 100
-  collisionRayDistance: 1.5
-  damage: 1
-  lifetime: 6

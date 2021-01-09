@@ -19,14 +19,20 @@ public class PlayerSpaceshipInputBehaviour : MonoBehaviour
 
 
 
-
-
-    
-    //AccShip
+     //AccShip
     public float myAccelaration;
     public float myAccelarationDecay;
 
     public float myCurrentSpeed;
+
+
+
+
+
+
+
+
+
 
 
     //Shooting
@@ -39,8 +45,6 @@ public class PlayerSpaceshipInputBehaviour : MonoBehaviour
     {
         Vector2 rawInput = value.ReadValue<Vector2>();
         rawInputSteering = new Vector3(rawInput.y, 0, -rawInput.x);
-
-         
         
     }
 
@@ -65,7 +69,10 @@ public class PlayerSpaceshipInputBehaviour : MonoBehaviour
         InputSmoothing();
         SetInputData();
 
-         if(Input.GetKey(KeyCode.H))
+
+
+            //Not great acceleration thing
+           if(Input.GetKey(KeyCode.H))
         { 
             if(spaceshipData.thrustAmount<120)
             {spaceshipData.thrustAmount+=myAccelaration;}
@@ -79,6 +86,7 @@ public class PlayerSpaceshipInputBehaviour : MonoBehaviour
 
 
         }
+
 
 
 

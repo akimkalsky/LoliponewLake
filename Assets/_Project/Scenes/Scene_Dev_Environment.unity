@@ -380,7 +380,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 40.33929
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -587,18 +587,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1185622374}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &457140197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457140196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a262ccc73021b948b4c695d3dafac1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &457140198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -936,7 +924,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 40.33929
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -1356,6 +1344,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8053178135859430314, guid: fe6afaeb1c7efd3429d0c67133684fbe,
         type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053178135859430314, guid: fe6afaeb1c7efd3429d0c67133684fbe,
+        type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
@@ -1388,6 +1381,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053178135859430314, guid: fe6afaeb1c7efd3429d0c67133684fbe,
+        type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053178135859430314, guid: fe6afaeb1c7efd3429d0c67133684fbe,
+        type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8053178135859430315, guid: fe6afaeb1c7efd3429d0c67133684fbe,
         type: 3}
@@ -1447,9 +1450,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1227260231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e364c22c828ed4b2da39d7d3d4ccdfa7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0877fa1a50b216e4fbfd3440a2a62f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: d74614823da6d4542ba09f3d82e63409, type: 2}
 --- !u!1 &1335990588
 GameObject:
   m_ObjectHideFlags: 3
@@ -1652,7 +1656,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 40.33929
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2055,7 +2059,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1468735408}
   m_CommonLens: 1
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 40.33929
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -2448,7 +2452,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 40.33929
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
