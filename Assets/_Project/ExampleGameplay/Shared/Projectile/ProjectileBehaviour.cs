@@ -14,8 +14,9 @@ public class ProjectileBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
-       /* Vector3 tempPos = transform.position;
-        MoveProjectile();
+           MoveProjectile();
+        Vector3 tempPos = transform.position;
+        /*
         if (Physics.Linecast(tempPos, transform.position, out RaycastHit hitInfo, data.layerMask))
         {
             RemoveProjectile();

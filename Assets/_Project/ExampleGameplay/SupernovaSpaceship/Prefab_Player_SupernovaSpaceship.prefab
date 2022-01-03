@@ -24,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051736639781926945}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.409}
+  m_LocalPosition: {x: 0, y: 0, z: -0.40900183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8292620642172631574}
   - {fileID: 1106087170165225441}
-  m_Father: {fileID: 3658435618658620574}
-  m_RootOrder: 5
+  m_Father: {fileID: 8053178135859430312}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7240274612602858296
 GameObject:
@@ -79,6 +79,7 @@ TrailRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -216,6 +217,7 @@ TrailRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -330,11 +332,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8053178135796252455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.35000038, z: 1.08}
+  m_LocalPosition: {x: 0, y: -0.35000038, z: 1.0799981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3658435618658620574}
-  m_RootOrder: 6
+  m_Father: {fileID: 8053178135859430312}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8053178135854395805
 GameObject:
@@ -364,7 +366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8053178135859430312}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8053178135859430313
 GameObject:
@@ -382,8 +384,6 @@ GameObject:
   - component: {fileID: 4068327185224481238}
   - component: {fileID: 8053178135859430311}
   - component: {fileID: 8053178135859430308}
-  - component: {fileID: 416781061}
-  - component: {fileID: 416781062}
   m_Layer: 0
   m_Name: Prefab_Player_SupernovaSpaceship
   m_TagString: Untagged
@@ -402,8 +402,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 22.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3658435618658620574}
   - {fileID: 8053178135854395804}
+  - {fileID: 8392883511680687832}
+  - {fileID: 8053178135796252454}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -436,6 +437,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8053178135859430315}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OnSteering
         m_Mode: 0
         m_Arguments:
@@ -455,6 +457,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8053178135859430315}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OnThrust
         m_Mode: 0
         m_Arguments:
@@ -470,6 +473,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8053178135859430315}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OnShoot
         m_Mode: 0
         m_Arguments:
@@ -501,6 +505,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steeringSmoothing: 1.5
   thrustSmoothing: 2
+  myAccelaration: 0
+  myAccelarationDecay: 0
+  myCurrentSpeed: 0
   spaceshipData: {fileID: 11400000, guid: d74614823da6d4542ba09f3d82e63409, type: 2}
 --- !u!114 &8053178135859430309
 MonoBehaviour:
@@ -518,6 +525,7 @@ MonoBehaviour:
   spaceshipRigidbody: {fileID: 8053178135859430308}
   projectileObjectPool: {fileID: 8053178135859430311}
   projectileSpawnTransform: {fileID: 8053178135796252454}
+  shipModel: {fileID: 0}
 --- !u!114 &8154113204455279259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: d74614823da6d4542ba09f3d82e63409, type: 2}
   trailParent: {fileID: 8392883511680687832}
+  spaceshipRenderer: {fileID: 0}
 --- !u!114 &8053178135859430311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,115 +583,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &416781061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8053178135859430313}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: c694ae3e0c7e1764c8ffd8616fe06814, type: 2}
---- !u!114 &416781062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8053178135859430313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"Spaceship Data","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Object
-      Pool Behaviour","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Projectile
-      Spawn Transform","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Next
-      Shot (DON''T EDIT)","value":{"$content":0.0,"$type":"System.Single"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: d74614823da6d4542ba09f3d82e63409, type: 2}
-    - {fileID: 8053178135859430311}
-    - {fileID: 8053178135796252454}
---- !u!1001 &8053178135709307531
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8053178135859430312}
-    m_Modifications:
-    - target: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736239473171313670, guid: 2afa2260509a19040a2f2e51b9ab7756,
-        type: 3}
-      propertyPath: m_Name
-      value: Prefab_Supernova_Spaceship
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2afa2260509a19040a2f2e51b9ab7756, type: 3}
---- !u!4 &3658435618658620574 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6703604845861783061, guid: 2afa2260509a19040a2f2e51b9ab7756,
-    type: 3}
-  m_PrefabInstance: {fileID: 8053178135709307531}
-  m_PrefabAsset: {fileID: 0}

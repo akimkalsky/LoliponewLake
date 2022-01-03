@@ -165,7 +165,7 @@ public class @InputActions_Player : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""65e16429-1990-4cbc-baac-f8733616381f"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/#(P)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",

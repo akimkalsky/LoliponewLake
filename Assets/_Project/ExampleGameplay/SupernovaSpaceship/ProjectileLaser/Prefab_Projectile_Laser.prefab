@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2895155639091036827}
   - component: {fileID: -936739694987886522}
+  - component: {fileID: 7916442898497919750}
   m_Layer: 0
   m_Name: Prefab_Projectile_Laser
   m_TagString: Untagged
@@ -45,6 +46,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8104e2b44940e3445b695422c14b40e4, type: 2}
+--- !u!33 &7916442898497919750
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457579855958659780}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8947639800086150646
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +110,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -125,6 +135,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!96 &9012187918883477034
 TrailRenderer:
   serializedVersion: 2
@@ -141,6 +152,7 @@ TrailRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
